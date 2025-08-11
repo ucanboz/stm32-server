@@ -6,6 +6,16 @@
 
 #define PORT 8080
 #define BUFFER_SIZE 1024
+#define VERSION "1.0"
+#define AUTHOR "ucanboz"
+#define DESCRIPTION "A simple TCP server that echoes back received messages."
+
+void print_info() {
+    printf("TCP Server Version: %s\n", VERSION);
+    printf("Author: %s\n", AUTHOR);
+    printf("Description: %s\n", DESCRIPTION);
+}
+
 
 int main() {
     int server_fd, client_fd;
@@ -38,6 +48,7 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
+    print_info();
     printf("Server listening on port %d...\n", PORT);
 
     // Accept
